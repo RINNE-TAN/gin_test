@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: gin-test
+  namespace: gin-test
+spec:
+  containers:
+  - name: gin-test
+    image: registry.cn-beijing.aliyuncs.com/rinne_tan/gin_test:latest
+    ports:
+      - containerPort: 10086
+        name: http
+    imagePullPolicy: Always
